@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="../assets/images/bow.ico" type="image/png" />
+<title>Saturn Solitaire</title>
+<link rel="stylesheet" href="styles/solitaire.css" />
+</head>
+<body>
+
+<h1>Saturn Solitaire</h1>
+
+<main>
+<!-- Stock and Waste piles -->
+<div id="stockWaste">
+  <div id="stockPile" title="Draw pile">🂠</div>
+  <div id="wastePile" title="Waste pile"></div>
+</div>
+<!-- Foundations -->
+<div id="foundations" aria-label="Foundation piles" style="display:flex; gap:12px; margin-top:20px;">
+  <!-- Four piles will be rendered here -->
+</div>
+<div id="tableau"></div>
+
+<div id="controls">
+  <label for="themeSelector">Theme:</label>
+  <select id="themeSelector" aria-label="Select Theme">
+    <option value="green" selected>Green</option>
+    <option value="blue">Blue</option>
+    <option value="pink">Pink</option>
+    <option value="purple">Purple</option>
+  </select>
+  <button id="backLobbyBtn" style="margin-left: 20px;">Back to Lobby</button>
+</div>
+
+<button id="hintBtn" title="Show Hint">💡</button>
+<button id="restartBtn">Restart Game</button>
+
+<button id="helpBtn">Help</button>
+<div id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle" tabindex="-1">
+  <h3 id="helpTitle">How to play Solitaire</h3>
+  <p><strong>Goal:</strong> Move all cards to the foundations, building each suit from Ace to King.</p>
+  <p><strong>Tableau piles:</strong> Build cards in descending order and alternating colors.</p>
+  <p><strong>Moving cards:</strong> Click a card to select it, then click a valid pile to move it there.</p>
+  <p><strong>Empty spaces:</strong> Only a King (or pile starting with King) can be moved to empty piles.</p>
+  <button id="closeHelp">Close</button>
+</div>
+
+<div id="celebration" style="display: none;">
+  <h2>🎉 Congratulations, You Won! 🎉</h2>
+  <button id="playAgainBtn">Play Again</button>
+</div>
+</main>
+<footer><footer>
+<script src="scripts/solitaire.js"></script>
+</body>
+</html>
