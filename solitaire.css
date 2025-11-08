@@ -1,4 +1,7 @@
-the css cut here. finish the code
+/* =============================== */
+/* 🌿 Green Theme 🌿                */
+/* =============================== */
+
 :root {
   --color-bg: #e6f0d4; /* green */
   --color-card-light: #f9fff7;
@@ -15,7 +18,11 @@ the css cut here. finish the code
   --color-highlight: #a8d08d;
 }
 
-/* Blue Theme */
+
+/* =============================== */
+/* 🌊 Blue Theme 🌊                */
+/* =============================== */
+
 .theme-blue {
   --color-bg: #d4e6f0;
   --color-card-light: #f7fbff;
@@ -24,7 +31,11 @@ the css cut here. finish the code
   --color-highlight: #8db6d0;
 }
 
-/* Pink Theme */
+
+/* =============================== */
+/* 🌸 Pink Theme 🌸                */
+/* =============================== */
+
 .theme-pink {
   --color-bg: #f0d4e6;
   --color-card-light: #fff7fb;
@@ -33,7 +44,11 @@ the css cut here. finish the code
   --color-highlight: #d08db6;
 }
 
-/* Purple Theme */
+
+/* =============================== */
+/* 💜 Purple Theme 💜              */
+/* =============================== */
+
 .theme-purple {
   --color-bg: #e6d4f0;
   --color-card-light: #f7f4ff;
@@ -41,6 +56,11 @@ the css cut here. finish the code
   --color-text: #3f1657;
   --color-highlight: #a88dd0;
 }
+
+
+/* =============================== */
+/* 🖋️ Global Styles 🖋️           */
+/* =============================== */
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,6 +76,11 @@ h1 {
   margin-bottom: 12px;
   font-weight: 700;
 }
+
+
+/* =============================== */
+/* 🃏 Tableau Styles 🃏            */
+/* =============================== */
 
 #tableau {
   display: flex;
@@ -114,6 +139,11 @@ h1 {
   cursor: default;
 }
 
+
+/* =============================== */
+/* 🎮 Controls Styles 🎮          */
+/* =============================== */
+
 #controls {
   margin-top: 20px;
   display: flex;
@@ -144,6 +174,11 @@ button:hover {
   background-color: var(--color-highlight);
   box-shadow: 0 0 8px var(--color-highlight);
 }
+
+
+/* =============================== */
+/* ❓ Help Modal Styles ❓        */
+/* =============================== */
 
 #helpModal {
   display: none;
@@ -184,10 +219,20 @@ button:hover {
   background-color: #7eb063;
 }
 
+
+/* =============================== */
+/* ⚡ Highlight Styles ⚡          */
+/* =============================== */
+
 .hint-highlight {
   border: 2px solid #ffeb3b; /* Yellow border for highlighting */
   box-shadow: 0 0 10px #ffeb3b; /* Glow effect */
 }
+
+
+/* =============================== */
+/* 🌙 Theme Selector Styles 🌙     */
+/* =============================== */
 
 #themeSelector {
   font-weight: 600;
@@ -204,7 +249,11 @@ button:hover {
   border-color: #7eb063;
 }
 
-/* Stock and waste styles */
+
+/* =============================== */
+/* 🏞️ Stock and Waste Styles 🏞️  */
+/* =============================== */
+
 #stockWaste {
   display: flex;
   gap: 20px;
@@ -248,6 +297,11 @@ button:hover {
   cursor: default;
 }
 
+
+/* =============================== */
+/* 🏰 Foundations Styles 🏰        */
+/* =============================== */
+
 #foundations {
   display: flex;
   gap: 12px;
@@ -284,10 +338,13 @@ button:hover {
   box-shadow: 0 0 10px var(--color-highlight);
 }
 
-/* Mobile Responsiveness */
+/* =============================== */
+/* 📱 Mobile Responsiveness 📱    */
+/* =============================== */
+
 @media (max-width: 900px) {
   body {
-    margin: 15px;
+    margin: 0 20px; /* Increased left and right margin */
   }
 
   h1 {
@@ -296,7 +353,7 @@ button:hover {
 
   .card {
     width: 60px;
-    height: 90px;
+    height: 80px;
     font-size: 14px;
     margin-top: 0; /* Remove overlapping */
   }
@@ -305,6 +362,7 @@ button:hover {
     gap: 8px;
     flex-wrap: wrap; /* Allow cards to wrap */
     justify-content: center;
+    display: flex;
   }
 
   .pile {
@@ -312,18 +370,22 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1; /* Allow piles to grow if space permits */
+    min-width: 60px; /* Minimum width to avoid too much shrinking */
   }
 
   #stockPile, #wastePile {
     width: 70px;
     height: 105px;
     font-size: 24px;
+    margin-bottom: 4px; /* Reduced space between waste and stock piles */
   }
 
   #foundations .foundation-pile {
     width: 70px;
     height: 105px;
     font-size: 16px;
+    margin-right: 4px; /* Reduced space between foundation cards */
   }
 
   #controls {
@@ -337,13 +399,13 @@ button:hover {
   }
 
   #helpModal {
-        width: 240px;
+    width: 240px;
   }
 }
 
 @media (max-width: 680px) {
   body {
-    margin: 12px;
+    margin: 0 15px; /* Increased left and right margin */
   }
 
   h1 {
@@ -361,6 +423,7 @@ button:hover {
     gap: 6px;
     flex-wrap: wrap; /* Allow cards to wrap */
     justify-content: center;
+    display: flex;
   }
 
   .pile {
@@ -368,18 +431,22 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+    min-width: 50px;
   }
 
   #stockPile, #wastePile {
-    width: 60px;
+    width: 70px;
     height: 90px;
     font-size: 20px;
+    margin-bottom: 4px; /* Reduced space between waste and stock piles */
   }
 
   #foundations .foundation-pile {
-    width: 60px;
+    width: 70px;
     height: 90px;
     font-size: 14px;
+    margin-right: 4px; /* Reduced space between foundation cards */
   }
 
   #controls {
@@ -399,7 +466,7 @@ button:hover {
 
 @media (max-width: 480px) {
   body {
-    margin: 10px;
+    margin: 0 10px; /* Increased left and right margin */
   }
 
   h1 {
@@ -407,35 +474,40 @@ button:hover {
   }
 
   .card {
-    width: 45px;
-    height: 68px;
+    width: 40px;
+    height: 60px;
     font-size: 10px;
     margin-top: 0; /* Remove overlapping */
   }
 
   #tableau {
     gap: 4px;
-    flex-wrap: wrap; /* Allow cards to wrap */
+    flex-wrap: wrap;
     justify-content: center;
+    display: flex;
   }
 
   .pile {
-    width: 55px;
+    width: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+    min-width: 45px; /* Make sure piles don't shrink too much */
   }
 
   #stockPile, #wastePile {
-    width: 55px;
-    height: 80px;
+    width: 50px;
+    height: 75px;
     font-size: 18px;
+    margin-bottom: 2px; /* Reduced space between waste and stock piles */
   }
 
   #foundations .foundation-pile {
-    width: 55px;
-    height: 80px;
+    width: 50px;
+    height: 75px;
     font-size: 12px;
+    margin-right: 2px; /* Reduced space between foundation cards */
   }
 
   #controls {
@@ -452,4 +524,3 @@ button:hover {
     width: 200px;
   }
 }
-
